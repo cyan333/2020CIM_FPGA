@@ -67,6 +67,7 @@ wire start_refresh_inputArray;
 wire start_DAC;
 
 wire signORunsign;
+wire test_enable;
 
 testcase5_top_DACandMAV tb5_uut(
 .sys_clk_p(sys_clk_p),
@@ -105,7 +106,8 @@ testcase5_top_DACandMAV tb5_uut(
 .DEC_EN_inputArray(DEC_EN_inputArray),
 .start_refresh_inputArray(start_refresh_inputArray),
 .start_DAC(start_DAC),
-.signORunsign(signORunsign)
+.signORunsign(signORunsign),
+.test_enable(test_enable)
 );
 
 initial sys_clk_p = 1'b1;
@@ -131,20 +133,24 @@ initial begin
     #5;
     fpga_reset = 1'b0;
     #360
-    startCompute = 1'b1;
-    #4600
-    requestDatafromDAC = 1'b1;
-    #10
-    requestDatafromDAC = 1'b0;
-    //MAV
-    #2000
-    requestDatafromMAV = 1'b1;
+    startCompute = 1'b1;    
+    #800
+    requestDatafromDAC = 1;
     #20
-    requestDatafromMAV = 1'b0;
-    #1000
-    start_ADC_fromchip = 1'b1;
-    #600
-    start_ADC_fromchip = 1'b0;
+    requestDatafromDAC = 0;
+    #2100
+    requestDatafromDAC = 1;
+    #20
+    requestDatafromDAC = 0;
+    //MAV
+//    #500
+//    requestDatafromMAV = 1'b1;
+//    #20
+//    requestDatafromMAV = 1'b0;
+//    #1000
+//    start_ADC_fromchip = 1'b1;
+//    #600
+//    start_ADC_fromchip = 1'b0;
 end
 
 

@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Aug 10 23:00:52 2020
-# Process ID: 5884
-# Current directory: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1
-# Command line: vivado.exe -log testcase6_ts_mav.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testcase6_ts_mav.tcl
-# Log file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/testcase6_ts_mav.vds
-# Journal file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1\vivado.jou
+# Start of session at: Sat Sep  5 14:32:52 2020
+# Process ID: 3784
+# Current directory: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1
+# Command line: vivado.exe -log testcase6_adc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testcase6_adc.tcl
+# Log file: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/testcase6_adc.vds
+# Journal file: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source testcase6_ts_mav.tcl -notrace
+source testcase6_adc.tcl -notrace

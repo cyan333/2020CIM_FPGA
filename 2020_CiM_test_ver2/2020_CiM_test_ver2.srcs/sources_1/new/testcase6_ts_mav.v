@@ -32,14 +32,12 @@ module testcase6_ts_mav(
     output reg mav_cap_cs_test,
     output reg test_enable,
     output signORunsign,
-    output sys_clk_slow,
-//    output clk_10M_valid,
-    output ledEN
+    output sys_clk_slow
     );
     
     //parameter
-    parameter signORunsign_param = 1'b1;
-    parameter [2:0] weight_value = 3'b111;
+    parameter signORunsign_param = 1'b0;
+    reg [2:0] weight_value;
     
     //state machin
     parameter IDLE = 5'd0,
@@ -66,22 +64,27 @@ module testcase6_ts_mav(
     reg [32:0] clk_counter=32'd0;
     parameter DIVISOR = 32'd4;
     reg [2:0] state_count;
+    reg [1:0] weght_count;
+    
     //wire
     wire clk_100M;
     wire clk_10M;
     wire locked;
     wire clk_500M;
-    wire clk_50M;
+    wire clk_50M, clk_25M, clk_15M;
 //    wire clk_10M_valid;
         
-    clk_core clk_core_inst (.clk_in1_p(sys_clk_p), 
-                            .clk_in1_n(sys_clk_n), 
-                            .reset(fpga_reset), 
-                            .sys_clk_100M(clk_100M), 
-                            .scan_clk_10M(clk_10M), 
-                            .locked(locked), 
-                            .clk_500M(clk_500M),
-                            .clk_50M(clk_50M));
+    clk_core clk_core_inst (
+    .clk_in1_p(sys_clk_p), 
+    .clk_in1_n(sys_clk_n), 
+    .reset(fpga_reset), 
+    .sys_clk_100M(clk_100M), 
+    .scan_clk_10M(clk_10M), 
+    .locked(locked),
+    .clk_50M(clk_50M),
+    .clk_25M(clk_25M),
+    .clk_15M(clk_15M));
+    
     assign sys_clk = clk_100M & locked;
     assign chip_reset_n = ~fpga_reset; 
     assign clk_10M_valid = clk_10M & locked;
@@ -89,7 +92,6 @@ module testcase6_ts_mav(
     assign weight_test = weight_value;
     
     wire clk_500M_valid, clk_50M_valid;
-    assign clk_500M_valid = clk_500M & locked;
     assign clk_50M_valid = clk_50M & locked;
     
     //clock divisor
@@ -135,6 +137,7 @@ module testcase6_ts_mav(
             mav_mux_test <= 0;
             mav_cap_cs_test <= 0;
             test_enable <= 0;
+            weght_count<=0;
         end
         else begin
         case(currentState)
@@ -143,8 +146,15 @@ module testcase6_ts_mav(
             mav_mux_test <= 0;
             mav_cap_cs_test <= 0;
             test_enable <= 0;
+            case(weght_count) 
+            2'b00: weight_value = 3'b001;
+            2'b01: weight_value = 3'b011;
+            2'b10: weight_value = 3'b101;
+            2'b11: weight_value = 3'b110;
+            endcase
         end
         MUX: begin
+            weght_count <= weght_count+1;
             mav_mux_test <= 1;
             mav_cap_cs_test <= 0;
             test_enable <= 0;

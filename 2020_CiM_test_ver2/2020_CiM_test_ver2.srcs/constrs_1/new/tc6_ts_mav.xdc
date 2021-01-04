@@ -12,7 +12,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports {test_enable}]
 set_property IOSTANDARD LVCMOS18 [get_ports {signORunsign}]
 
 set_property IOSTANDARD LVCMOS18 [get_ports {sys_clk_slow}]
-set_property IOSTANDARD LVCMOS18 [get_ports {ledEN}]
 
 
 
@@ -31,7 +30,6 @@ set_property PACKAGE_PIN F39 [get_ports {test_enable}]
 set_property PACKAGE_PIN K42 [get_ports {signORunsign}]
 
 set_property PACKAGE_PIN K32 [get_ports {sys_clk_slow}]
-set_property PACKAGE_PIN AN39 [get_ports {ledEN}]
 
 set_property SLEW FAST [get_ports -filter "direction==out"]
 set_property DRIVE 16 [get_ports -filter "direction==out"]

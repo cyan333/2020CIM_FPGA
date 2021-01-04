@@ -33,7 +33,6 @@ module testcase6_tb();
     wire test_enable;
     wire signORunsign;
     wire sys_clk_slow;
-    wire ledEN;
 
 testcase6_ts_mav tb6_uut(
     .sys_clk_p(sys_clk_p),
@@ -46,8 +45,7 @@ testcase6_ts_mav tb6_uut(
     .mav_cap_cs_test(mav_cap_cs_test),
     .test_enable(test_enable),
     .signORunsign(signORunsign),
-    .sys_clk_slow(sys_clk_slow),
-    .ledEN(ledEN)
+    .sys_clk_slow(sys_clk_slow)
 );
 
 initial sys_clk_p = 1'b1;

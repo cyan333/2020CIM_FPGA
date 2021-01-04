@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testcase8_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testcase8_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="162575fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/testcase8_tb/sys_clk_n" type="logic">
+      <obj_property name="ElementShortName">sys_clk_n</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/sys_clk_p" type="logic">
+      <obj_property name="ElementShortName">sys_clk_p</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/requestDatafromDAC" type="logic">
+      <obj_property name="ElementShortName">requestDatafromDAC</obj_property>
+      <obj_property name="ObjectShortName">requestDatafromDAC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/start_DAC" type="logic">
+      <obj_property name="ElementShortName">start_DAC</obj_property>
+      <obj_property name="ObjectShortName">start_DAC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/chip_reset_n" type="logic">
+      <obj_property name="ElementShortName">chip_reset_n</obj_property>
+      <obj_property name="ObjectShortName">chip_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/tb7_uut/currentState" type="array">
+      <obj_property name="ElementShortName">currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/tb7_uut/idle_counter" type="array">
+      <obj_property name="ElementShortName">idle_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">idle_counter[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/detectRequestData" type="logic">
+      <obj_property name="ElementShortName">detectRequestData</obj_property>
+      <obj_property name="ObjectShortName">detectRequestData</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase8_tb/tb7_uut/haveRecordRequestData" type="logic">
+      <obj_property name="ElementShortName">haveRecordRequestData</obj_property>
+      <obj_property name="ObjectShortName">haveRecordRequestData</obj_property>
+   </wvobject>
+</wave_config>

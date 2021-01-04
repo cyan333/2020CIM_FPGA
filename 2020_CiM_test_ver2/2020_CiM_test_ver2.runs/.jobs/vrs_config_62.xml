@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_8" LaunchDir="C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_8" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_2" LaunchDir="C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_8"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

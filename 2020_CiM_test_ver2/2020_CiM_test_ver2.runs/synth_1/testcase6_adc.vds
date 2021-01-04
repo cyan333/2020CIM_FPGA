@@ -1,0 +1,386 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Sep  5 14:32:52 2020
+# Process ID: 3784
+# Current directory: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1
+# Command line: vivado.exe -log testcase6_adc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testcase6_adc.tcl
+# Log file: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/testcase6_adc.vds
+# Journal file: C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source testcase6_adc.tcl -notrace
+Command: synth_design -top testcase6_adc -part xc7vx485tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-86] Your Synthesis license expires in 3 day(s)
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18728
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1186.863 ; gain = 141.566
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'testcase6_adc' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:23]
+	Parameter maxCol_mavArray bound to: 10'b1000100110 
+	Parameter maxRow_mavArray bound to: 3'b001 
+	Parameter mavArray bound to: 1 - type: integer 
+	Parameter loadThisManyRowForComputation_mavArray bound to: 3'b001 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter SCAN_DATA_TO_MAV_ARRAY bound to: 4'b0001 
+	Parameter ADC_RESET bound to: 4'b0010 
+	Parameter ADC_START bound to: 4'b0011 
+	Parameter WAIT_FOR_NEXT_ROUND bound to: 4'b0100 
+	Parameter RESET bound to: 4'b0101 
+	Parameter MAV_FINISHED bound to: 4'b0110 
+	Parameter START_ADC bound to: 4'b0111 
+	Parameter WAIT_TO_START_ADC bound to: 4'b1000 
+	Parameter TEST_READ_RESET bound to: 4'b1001 
+	Parameter DISABLE_START_SCAN bound to: 4'b1100 
+INFO: [Synth 8-6157] synthesizing module 'clk_core' [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.v:74]
+INFO: [Synth 8-6157] synthesizing module 'clk_core_clk_wiz' [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core_clk_wiz.v:72]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:32992]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:32992]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:39994]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.250000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.500000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 105 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 42 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 21 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 70 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:39994]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'clk_core_clk_wiz' (4#1) [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core_clk_wiz.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'clk_core' (5#1) [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.v:74]
+INFO: [Synth 8-6157] synthesizing module 'scan_module' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter WRITE bound to: 3'b001 
+	Parameter UPDATE bound to: 3'b010 
+	Parameter UPDATE_VALUE bound to: 3'b011 
+	Parameter RESET bound to: 3'b100 
+	Parameter READ bound to: 3'b101 
+	Parameter SCANOUT bound to: 3'b110 
+	Parameter EQ_TIMING bound to: 3'b111 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/ECE-IT-Admin/Documents/Shanshan/memData/ts_dac_data.mem' is read successfully [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v:84]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/ECE-IT-Admin/Documents/Shanshan/memData/kernalArray.mem' is read successfully [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v:85]
+WARNING: [Synth 8-567] referenced signal 'writeORread' should be on the sensitivity list [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'scan_module' (6#1) [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v:23]
+WARNING: [Synth 8-7071] port 'inputArrayADDR' of module 'scan_module' is unconnected for instance 'scan_mavArray' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:117]
+WARNING: [Synth 8-7023] instance 'scan_mavArray' of module 'scan_module' has 19 connections declared, but only 18 given [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:117]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:149]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:212]
+INFO: [Synth 8-6155] done synthesizing module 'testcase6_adc' (7#1) [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1244.383 ; gain = 199.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.383 ; gain = 199.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.383 ; gain = 199.086
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1244.383 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core_board.xdc] for cell 'clk_core_inst/inst'
+Finished Parsing XDC File [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core_board.xdc] for cell 'clk_core_inst/inst'
+Parsing XDC File [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.xdc] for cell 'clk_core_inst/inst'
+Finished Parsing XDC File [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.xdc] for cell 'clk_core_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testcase6_adc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/testcase6_adc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/constrs_testcase6/new/tc6_top.xdc]
+Finished Parsing XDC File [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/constrs_testcase6/new/tc6_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/constrs_testcase6/new/tc6_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testcase6_adc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/testcase6_adc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testcase6_adc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/testcase6_adc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1366.059 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for clk_core_inst/inst. (constraint file  C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/dont_touch.xdc, line 10).
+Applied set_property DONT_TOUCH = true for clk_core_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'currentState_reg' in module 'testcase6_adc'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:152]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextState_reg' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:152]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                             0000
+  SCAN_DATA_TO_MAV_ARRAY |                            00010 |                             0001
+      DISABLE_START_SCAN |                            00100 |                             1100
+               ADC_RESET |                            01000 |                             0010
+               ADC_START |                            10000 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currentState_reg' using encoding 'one-hot' in module 'testcase6_adc'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextState_reg' [C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v:152]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 3     
++---Registers : 
+	              551 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   8 Input  551 Bit        Muxes := 1     
+	   4 Input  550 Bit        Muxes := 1     
+	   2 Input  550 Bit        Muxes := 1     
+	   5 Input  257 Bit        Muxes := 1     
+	   8 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   5 Input    9 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 5     
+	   8 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 26    
+	   2 Input    1 Bit        Muxes := 22    
+	   4 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1366.059 ; gain = 320.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     7|
+|2     |CARRY4     |     2|
+|3     |LUT1       |     3|
+|4     |LUT2       |    21|
+|5     |LUT3       |    14|
+|6     |LUT4       |    15|
+|7     |LUT5       |    41|
+|8     |LUT6       |    56|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |    10|
+|11    |MUXF8      |     1|
+|12    |FDCE       |    53|
+|13    |FDPE       |     2|
+|14    |FDRE       |     8|
+|15    |LD         |     5|
+|16    |IBUF       |     1|
+|17    |IBUFDS     |     1|
+|18    |OBUF       |    18|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1367.270 ; gain = 200.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.270 ; gain = 321.973
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1375.316 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1390.770 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LD => LDCE: 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1390.770 ; gain = 345.473
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ECE-IT-Admin/Box/Shanshan_Xie/Research_work/1_2019_CiM/Testing/Cifar10_FPGA_Measurement/2020_CiM_test_ver2/2020_CiM_test_ver2.runs/synth_1/testcase6_adc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file testcase6_adc_utilization_synth.rpt -pb testcase6_adc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  5 14:33:34 2020...

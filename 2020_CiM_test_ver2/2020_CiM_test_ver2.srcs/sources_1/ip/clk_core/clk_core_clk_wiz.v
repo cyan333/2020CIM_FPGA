@@ -56,10 +56,11 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// sys_clk_100M__100.00000______0.000______50.0______112.316_____89.971
-// scan_clk_10M__10.00000______0.000______50.0______178.053_____89.971
-// clk_500M__500.00000______0.000______50.0_______82.193_____89.971
-// _clk_50M__50.00000______0.000______50.0______129.198_____89.971
+// sys_clk_100M__100.00000______0.000______50.0______110.105_____87.375
+// scan_clk_10M__10.00000______0.000______50.0______174.660_____87.375
+// _clk_25M__25.00000______0.000______50.0______145.800_____87.375
+// _clk_50M__50.00000______0.000______50.0______126.626_____87.375
+// _clk_15M__15.00000______0.000______50.0______161.268_____87.375
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -74,8 +75,9 @@ module clk_core_clk_wiz
   // Clock out ports
   output        sys_clk_100M,
   output        scan_clk_10M,
-  output        clk_500M,
+  output        clk_25M,
   output        clk_50M,
+  output        clk_15M,
   // Status and control signals
   input         reset,
   output        locked,
@@ -103,9 +105,9 @@ wire clk_in2_clk_core;
 
   wire        sys_clk_100M_clk_core;
   wire        scan_clk_10M_clk_core;
-  wire        clk_500M_clk_core;
+  wire        clk_25M_clk_core;
   wire        clk_50M_clk_core;
-  wire        clk_out5_clk_core;
+  wire        clk_15M_clk_core;
   wire        clk_out6_clk_core;
   wire        clk_out7_clk_core;
 
@@ -120,7 +122,6 @@ wire clk_in2_clk_core;
    wire clkout1b_unused;
    wire clkout2b_unused;
    wire clkout3b_unused;
-   wire clkout4_unused;
   wire        clkout5_unused;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
@@ -133,25 +134,29 @@ wire clk_in2_clk_core;
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (5.000),
+    .CLKFBOUT_MULT_F      (5.250),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (10.000),
+    .CLKOUT0_DIVIDE_F     (10.500),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (100),
+    .CLKOUT1_DIVIDE       (105),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (2),
+    .CLKOUT2_DIVIDE       (42),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
-    .CLKOUT3_DIVIDE       (20),
+    .CLKOUT3_DIVIDE       (21),
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
     .CLKOUT3_USE_FINE_PS  ("FALSE"),
+    .CLKOUT4_DIVIDE       (70),
+    .CLKOUT4_PHASE        (0.000),
+    .CLKOUT4_DUTY_CYCLE   (0.500),
+    .CLKOUT4_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (5.000))
   mmcm_adv_inst
     // Output clocks
@@ -162,11 +167,11 @@ wire clk_in2_clk_core;
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (scan_clk_10M_clk_core),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clk_500M_clk_core),
+    .CLKOUT2             (clk_25M_clk_core),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clk_50M_clk_core),
     .CLKOUT3B            (clkout3b_unused),
-    .CLKOUT4             (clkout4_unused),
+    .CLKOUT4             (clk_15M_clk_core),
     .CLKOUT5             (clkout5_unused),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
@@ -221,12 +226,16 @@ wire clk_in2_clk_core;
     .I   (scan_clk_10M_clk_core));
 
   BUFG clkout3_buf
-   (.O   (clk_500M),
-    .I   (clk_500M_clk_core));
+   (.O   (clk_25M),
+    .I   (clk_25M_clk_core));
 
   BUFG clkout4_buf
    (.O   (clk_50M),
     .I   (clk_50M_clk_core));
+
+  BUFG clkout5_buf
+   (.O   (clk_15M),
+    .I   (clk_15M_clk_core));
 
 
 

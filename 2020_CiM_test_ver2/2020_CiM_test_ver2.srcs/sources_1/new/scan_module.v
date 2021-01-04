@@ -27,8 +27,9 @@ module scan_module(
     input startScan,
     
     //scan parameter
-    input [2:0] maxCol,
-    input [2:0] maxRow,
+    input [9:0] maxCol,
+    input [5:0] maxRow,
+    
     
     //config
     input inputArrayORkernelArray,
@@ -42,8 +43,8 @@ module scan_module(
     output reg update_clk_EN,
     output reg all_scan_done,
     
-    output reg [3:0] inputArrayADDR,
-    output reg [4:0] mavArrayADDR,
+    output [3:0] inputArrayADDR,
+    output [4:0] mavArrayADDR,
     output reg WE, DRAM_EN, DEC_EN
     );
     
@@ -54,15 +55,16 @@ module scan_module(
     parameter RESET = 3'd4;
     parameter READ = 3'd5;
     parameter SCANOUT = 3'd6;
+    parameter EQ_TIMING = 3'd7;
     
     
     
-    reg [20:0] inputArrayRowValue[2:0]; //left: column: right: row
-    reg [20:0] kernelArrayRowValue[2:0]; //left: column: right: row
+    reg [256:0] inputArrayRowValue[2:0]; //left: column: right: row
+    reg [549:0] kernelArrayRowValue[2:0]; //left: column: right: row
     reg [2:0] currentState, nextState;
     reg [4:0] currentAccessRow;
-    reg [3:0] this_scancol; //track: which scan bit it is currently scanning
-    reg [20:0] thisRowValue;
+    reg [9:0] this_scancol; //track: which scan bit it is currently scanning
+    reg [550:0] thisRowValue;
     reg scan_done; //indicate: scan has finished for one row.
     
     reg [1:0] update_count;
@@ -71,38 +73,47 @@ module scan_module(
     reg last_row;
     reg haveScanedAlready;
     reg readyRead, read_done;
-    reg [1:0] read_timer;
+    reg [2:0] read_timer;
     reg finish_scan;
-    
+    reg [2:0] EQ_counter;
+    assign mavArrayADDR = currentAccessRow;
+    assign inputArrayADDR = currentAccessRow;
+
+   
     initial begin
-        $readmemb("D:/PHD/2019_CiM/Testing/FPGA/memData/firstMemFile.mem", inputArrayRowValue);
-        $readmemb("D:/PHD/2019_CiM/Testing/FPGA/memData/kernalArray.mem", kernelArrayRowValue);
+        $readmemb("C:/Users/ECE-IT-Admin/Documents/Shanshan/memData/ts_dac_data.mem", inputArrayRowValue);
+        $readmemb("C:/Users/ECE-IT-Admin/Documents/Shanshan/memData/kernalArray.mem", kernelArrayRowValue);
+//        $readmemb("C:/Users/ECE-IT-Admin/Documents/Shanshan/memData/ts_mav_data.mem", kernelArrayRowValue);
 
     end
 //    assign all_scan_done = update_done & last_row;
+//    always @ (negedge scan_clk) begin
+//        if (finish_scan) begin
+//            all_scan_done <= 1;
+//            finish_scan <= 0;
+//        end
+//        else all_scan_done <= 0;
+//    end
     always @ (negedge scan_clk) begin
-        if (finish_scan) begin
-            all_scan_done <= 1;
-            finish_scan <= 0;
-        end
-        else all_scan_done <= 0;
-    end
-    always @ (posedge scan_clk) begin
-        if (update_done & last_row) begin
+        if (last_row) begin
             finish_scan <= 1;
+            all_scan_done <= 1;
         end
-        else finish_scan <= 0;
+        else begin
+            finish_scan <= 0;
+            all_scan_done <= 0;
+        end        
     end
     always @ (posedge scan_clk or posedge reset) begin
         if(reset) currentState <= IDLE;
         else currentState <= nextState;
     end
     
-    always @ (currentState or startScan or scan_done or didUpdateRowValue or update_done or last_row or read_done or readyRead) begin
+    always @ (currentState or startScan or scan_done or didUpdateRowValue or update_done or last_row or read_done or readyRead or EQ_counter or read_timer) begin
         case(currentState) 
         IDLE: begin
-            if(startScan & ~haveScanedAlready & ~writeORread) nextState = UPDATE_VALUE;
-            else if (startScan & ~haveScanedAlready & writeORread) nextState = RESET;
+            if(startScan & ~writeORread) nextState = UPDATE_VALUE;
+            else if (startScan & writeORread) nextState = READ;
             else nextState = IDLE;
         end
         
@@ -117,10 +128,18 @@ module scan_module(
         end
         UPDATE: begin
             if(update_done) begin
+                nextState = EQ_TIMING;
+//                if(!last_row) nextState = UPDATE_VALUE;
+//                else nextState = EQ_TIMING;  //change the state here
+            end
+            else nextState = UPDATE;     
+        end
+        EQ_TIMING: begin
+            if(EQ_counter < 3) nextState = EQ_TIMING;
+            else begin
                 if(!last_row) nextState = UPDATE_VALUE;
                 else nextState = IDLE;  //change the state here
             end
-            else nextState = UPDATE;     
         end
         RESET: begin
             if (readyRead) nextState = READ;
@@ -129,7 +148,13 @@ module scan_module(
         READ: begin
 //            if (read_done) nextState = SCANOUT;
 //            else nextState = READ;
-            nextState = SCANOUT;
+//            nextState = SCANOUT;
+            if(read_timer < 2) begin
+                nextState = READ;
+            end
+            else begin
+                nextState = SCANOUT;
+            end
         end
         SCANOUT: begin
             if(scan_done) begin
@@ -162,8 +187,9 @@ module scan_module(
             WE <= 0;
             DRAM_EN <= 0;
             DEC_EN <= 0;
-            inputArrayADDR <= 4'b0;
-            mavArrayADDR <= 5'b0;
+            EQ_counter <= 0;
+//            inputArrayADDR <= 4'b0;
+//            mavArrayADDR <= 5'b0;
         end
         else begin
             case(currentState) 
@@ -186,8 +212,9 @@ module scan_module(
                     WE <= 0;
                     DRAM_EN <= 0;
                     DEC_EN <= 0;
-                    inputArrayADDR <= 4'b0;
-                    mavArrayADDR <= 5'b0;
+                    EQ_counter <= 0; //determine EQ timing: pull down DEC_EN first and then pull down DRAM_EN
+//                    inputArrayADDR <= 4'b0;
+//                    mavArrayADDR <= 5'b0;
                 end
                 UPDATE_VALUE: begin
                     if(inputArrayORkernelArray) thisRowValue <= kernelArrayRowValue[currentAccessRow];
@@ -217,33 +244,63 @@ module scan_module(
                 end
                 UPDATE: begin
                     WE <= 1;
-                    DRAM_EN <= 1;
-                    DEC_EN <= 1;
                     se <= 0;
                     scan_done <= 0;
-                    if(inputArrayORkernelArray) mavArrayADDR <= currentAccessRow;
-                    else inputArrayADDR <= currentAccessRow;
-                    
-                    if(update_count < 2) begin
+                    ///// CHANGE HERE /////
+//                    DRAM_EN <= 1;
+//                    DEC_EN <= 1;
+                    ///////////////////////
+                    ///// CHANGE HERE /////
+                    if(update_count == 0) begin
+                        DRAM_EN <= 1;
+                        DEC_EN <= 0;
+                    end
+                    else if (update_count == 1) begin
+                        DRAM_EN <= 1;
+                        DEC_EN <= 1;
+                    end
+                    ///////////////////////
+                    if(update_count < 3) begin
                         update_clk_EN <= 1;
                         update_count <= update_count + 1;
                     end
                     else begin
                         update_clk_EN <= 0;
                         update_done <= 1;
+//                        if(currentAccessRow < maxRow-1) begin
+//                            last_row <= 1'b0;
+//                            currentAccessRow <= currentAccessRow + 1;
+//                        end
+//                        else begin
+//                            last_row <= 1'b1;
+////                            haveScanedAlready <= 1'b1;
+//                            currentAccessRow <= 0;
+                            
+//                        end
+                    end
+                end
+                EQ_TIMING: begin
+                    if(EQ_counter == 0) begin
+                        DRAM_EN <= 1;
+                        DEC_EN <= 0;
+                    end
+                    else if (EQ_counter == 2) begin
+                        DRAM_EN <= 0;
+                        DEC_EN <= 0;
+                        
                         if(currentAccessRow < maxRow-1) begin
                             last_row <= 1'b0;
                             currentAccessRow <= currentAccessRow + 1;
                         end
                         else begin
                             last_row <= 1'b1;
-                            haveScanedAlready <= 1'b1;
                             currentAccessRow <= 0;
-                            
                         end
+                        
                     end
+                    if(EQ_counter < 3) EQ_counter <= EQ_counter + 1;
+                    else EQ_counter <= 0;
                 end
-                
                 RESET: begin
                     WE = 0;
                     DRAM_EN = 0;
@@ -259,20 +316,30 @@ module scan_module(
                 end
                 
                 READ: begin
-                    WE = 0;
-                    DRAM_EN = 1;
-                    DEC_EN = 1;
+                    WE <= 0;
+                    
                     readyRead <= 0;
-//                    if(read_timer < 1) begin
-//                        read_timer <= read_timer + 1;
-//                        read_done <= 0;
-//                    end
-//                    else begin
-//                        read_done <= 1;
-//                        //read_timer <= 0;
-//                    end
-                    if(inputArrayORkernelArray) mavArrayADDR <= currentAccessRow;
-                    else inputArrayADDR <= currentAccessRow;
+                    ///////////CHANGE HERE////////////
+//                    DRAM_EN <= 1;
+//                    DEC_EN <= 1;
+                    if(read_timer == 0) begin
+                        DRAM_EN <= 1;
+                        DEC_EN <= 0;
+                    end
+                    else if(read_timer == 1) begin
+                        DRAM_EN <= 1;
+                        DEC_EN <= 1;
+                    end
+                    //////////////////////////////////
+                    
+                    if(read_timer < 2) begin
+                        read_timer <= read_timer + 1;
+                    end
+                    else begin
+                        read_timer <= 0;
+                    end
+//                    if(inputArrayORkernelArray) mavArrayADDR <= currentAccessRow;
+//                    else inputArrayADDR <= currentAccessRow;
                 end
                 
                 SCANOUT: begin
@@ -281,7 +348,16 @@ module scan_module(
                         scan_clk_EN <= 1'b1; 
                         this_scancol <= this_scancol + 1; 
                         if(this_scancol == 0) se <= 0;
-                        else se <= 1;
+                        else if (this_scancol == 1) begin
+                            se <= 1;
+                            DRAM_EN = 1;
+                            DEC_EN = 0;
+                        end
+                        else if(this_scancol > 2) begin
+                            se <= 1;
+                            DRAM_EN = 0;
+                            DEC_EN = 0;
+                        end
                     end
                     else begin 
                         se <= 0;

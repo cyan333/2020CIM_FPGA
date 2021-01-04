@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Jan  4 15:09:07 2021
+# Process ID: 35704
+# Current directory: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/2020CIM_FPGA/2020_CiM_test_ver2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37576 C:\Users\ECE-IT-Admin\Documents\Shanshan\2019_CIM\Testing\2020CIM_FPGA\2020_CiM_test_ver2\2020_CiM_test_ver2.xpr
+# Log file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/2020CIM_FPGA/2020_CiM_test_ver2/vivado.log
+# Journal file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/2020CIM_FPGA/2020_CiM_test_ver2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/2020CIM_FPGA/2020_CiM_test_ver2/2020_CiM_test_ver2.xpr
+update_compile_order -fileset sources_1

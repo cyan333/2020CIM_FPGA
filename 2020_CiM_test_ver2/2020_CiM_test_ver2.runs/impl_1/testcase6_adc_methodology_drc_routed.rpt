@@ -1,0 +1,71 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Sep  5 14:34:51 2020
+| Host         : ECE-D09200 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file testcase6_adc_methodology_drc_routed.rpt -pb testcase6_adc_methodology_drc_routed.pb -rpx testcase6_adc_methodology_drc_routed.rpx
+| Design       : testcase6_adc
+| Device       : xc7vx485tffg1761-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 7
++-----------+------------------+-----------------------+------------+
+| Rule      | Severity         | Description           | Violations |
++-----------+------------------+-----------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree | 2          |
+| TIMING-20 | Warning          | Non-clocked latch     | 5          |
++-----------+------------------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT clk_10M_valid_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT sys_clk_OBUF_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch FSM_onehot_nextState_reg[0] cannot be properly analyzed as its control pin FSM_onehot_nextState_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch FSM_onehot_nextState_reg[1] cannot be properly analyzed as its control pin FSM_onehot_nextState_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch FSM_onehot_nextState_reg[2] cannot be properly analyzed as its control pin FSM_onehot_nextState_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch FSM_onehot_nextState_reg[3] cannot be properly analyzed as its control pin FSM_onehot_nextState_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch FSM_onehot_nextState_reg[4] cannot be properly analyzed as its control pin FSM_onehot_nextState_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+

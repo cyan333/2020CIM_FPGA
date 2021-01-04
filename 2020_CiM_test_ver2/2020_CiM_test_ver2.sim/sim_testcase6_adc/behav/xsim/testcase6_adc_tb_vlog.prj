@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../2020_CiM_test_ver2.srcs/sources_1/ip/clk_core" \
+"../../../../2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core_clk_wiz.v" \
+"../../../../2020_CiM_test_ver2.srcs/sources_1/ip/clk_core/clk_core.v" \
+"../../../../2020_CiM_test_ver2.srcs/sources_1/new/scan_module.v" \
+"../../../../2020_CiM_test_ver2.srcs/sources_1/new/testcase6_adc.v" \
+"../../../../2020_CiM_test_ver2.srcs/sim_testcase6_adc/new/testcase6_adc_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

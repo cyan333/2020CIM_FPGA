@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1597118448">
-  <File Type="PA-TCL" Name="testcase6_ts_mav.tcl"/>
-  <File Type="REPORTS-TCL" Name="testcase6_ts_mav_reports.tcl"/>
-  <File Type="RDS-RDS" Name="testcase6_ts_mav.vds"/>
-  <File Type="RDS-UTIL" Name="testcase6_ts_mav_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="testcase6_ts_mav_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="testcase6_ts_mav.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1599334369">
+  <File Type="PA-TCL" Name="testcase6_adc.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="testcase6_adc_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="testcase6_adc_reports.tcl"/>
+  <File Type="RDS-RDS" Name="testcase6_adc.vds"/>
+  <File Type="RDS-UTIL" Name="testcase6_adc_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="testcase6_adc_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="testcase6_adc.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="testcase6_adc_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="testcase6_adc_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/clk_core/clk_core.xci">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci"/>
         <Attr Name="ImportTime" Val="1594325763"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/testcase6_ts_mav.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase6_ts_mav.v"/>
-        <Attr Name="ImportTime" Val="1596691372"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,9 +22,25 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/scan_module.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/scan_module.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/scan_module.v"/>
         <Attr Name="ImportTime" Val="1596414938"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase6_adc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase6_ts_mav.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase6_ts_mav.v"/>
+        <Attr Name="ImportTime" Val="1596691372"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -39,7 +49,7 @@
     <File Path="$PSRCDIR/sources_1/new/testcase3_DAC.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v"/>
         <Attr Name="ImportTime" Val="1596690594"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -49,7 +59,7 @@
     <File Path="$PSRCDIR/sources_1/new/testcase4_MAV.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase4_MAV.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase4_MAV.v"/>
         <Attr Name="ImportTime" Val="1596661627"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -59,8 +69,24 @@
     <File Path="$PSRCDIR/sources_1/new/testcase5_top_DACandMAV.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase5_top_DACandMAV.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase5_top_DACandMAV.v"/>
         <Attr Name="ImportTime" Val="1596657060"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase8_start_DAC_2.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase7_start_DAC.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -68,15 +94,12 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="testcase6_ts_mav"/>
+      <Option Name="TopModule" Val="testcase6_adc"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
-    <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/tc6_ts_mav.xdc">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_testcase6">
+    <File Path="$PSRCDIR/constrs_testcase6/new/tc6_top.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/constrs_1/new/tc6_ts_mav.xdc"/>
-        <Attr Name="ImportTime" Val="1596760425"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

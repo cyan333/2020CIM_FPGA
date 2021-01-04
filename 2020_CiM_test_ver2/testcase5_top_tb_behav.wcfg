@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testcase5_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testcase5_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="180219285fs"></ZoomEndTime>
+      <Cursor1Time time="180219285fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="49" />
+   <wvobject fp_name="/testcase5_top_tb/sys_clk_p" type="logic">
+      <obj_property name="ElementShortName">sys_clk_p</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/sys_clk_n" type="logic">
+      <obj_property name="ElementShortName">sys_clk_n</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/fpga_reset" type="logic">
+      <obj_property name="ElementShortName">fpga_reset</obj_property>
+      <obj_property name="ObjectShortName">fpga_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/startCompute" type="logic">
+      <obj_property name="ElementShortName">startCompute</obj_property>
+      <obj_property name="ObjectShortName">startCompute</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/chip_reset_n" type="logic">
+      <obj_property name="ElementShortName">chip_reset_n</obj_property>
+      <obj_property name="ObjectShortName">chip_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/update_clk_mavArray" type="logic">
+      <obj_property name="ElementShortName">update_clk_mavArray</obj_property>
+      <obj_property name="ObjectShortName">update_clk_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/scanin_mavArray" type="logic">
+      <obj_property name="ElementShortName">scanin_mavArray</obj_property>
+      <obj_property name="ObjectShortName">scanin_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/scan_clk_mavArray" type="logic">
+      <obj_property name="ElementShortName">scan_clk_mavArray</obj_property>
+      <obj_property name="ObjectShortName">scan_clk_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/se_mavArray" type="logic">
+      <obj_property name="ElementShortName">se_mavArray</obj_property>
+      <obj_property name="ObjectShortName">se_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/mavArrayADDR" type="array">
+      <obj_property name="ElementShortName">mavArrayADDR[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mavArrayADDR[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc4_uut/start_WAIT_state" type="logic">
+      <obj_property name="ElementShortName">start_WAIT_state</obj_property>
+      <obj_property name="ObjectShortName">start_WAIT_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/WE_mavArray" type="logic">
+      <obj_property name="ElementShortName">WE_mavArray</obj_property>
+      <obj_property name="ObjectShortName">WE_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc4_uut/currentState" type="array">
+      <obj_property name="ElementShortName">currentState[3:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/DRAM_EN_mavArray" type="logic">
+      <obj_property name="ElementShortName">DRAM_EN_mavArray</obj_property>
+      <obj_property name="ObjectShortName">DRAM_EN_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/DEC_EN_mavArray" type="logic">
+      <obj_property name="ElementShortName">DEC_EN_mavArray</obj_property>
+      <obj_property name="ObjectShortName">DEC_EN_mavArray</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/finish_loading_mav" type="logic">
+      <obj_property name="ElementShortName">finish_loading_mav</obj_property>
+      <obj_property name="ObjectShortName">finish_loading_mav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/mav_scan_finish" type="logic">
+      <obj_property name="ElementShortName">mav_scan_finish</obj_property>
+      <obj_property name="ObjectShortName">mav_scan_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/test_enable" type="logic">
+      <obj_property name="ElementShortName">test_enable</obj_property>
+      <obj_property name="ObjectShortName">test_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc4_uut/test_enable_mav" type="logic">
+      <obj_property name="ElementShortName">test_enable_mav</obj_property>
+      <obj_property name="ObjectShortName">test_enable_mav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/test_enable_DAC" type="logic">
+      <obj_property name="ElementShortName">test_enable_DAC</obj_property>
+      <obj_property name="ObjectShortName">test_enable_DAC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/update_clk_inputArray" type="logic">
+      <obj_property name="ElementShortName">update_clk_inputArray</obj_property>
+      <obj_property name="ObjectShortName">update_clk_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/scanin_inputArray" type="logic">
+      <obj_property name="ElementShortName">scanin_inputArray</obj_property>
+      <obj_property name="ObjectShortName">scanin_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/scan_clk_inputArray" type="logic">
+      <obj_property name="ElementShortName">scan_clk_inputArray</obj_property>
+      <obj_property name="ObjectShortName">scan_clk_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/se_inputArray" type="logic">
+      <obj_property name="ElementShortName">se_inputArray</obj_property>
+      <obj_property name="ObjectShortName">se_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/currentState" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">currentState[3:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[3:0]</obj_property>
+      <obj_property name="label">currentState[3:0] - DAC</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/mav_finish" type="logic">
+      <obj_property name="ElementShortName">mav_finish</obj_property>
+      <obj_property name="ObjectShortName">mav_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/load_timer" type="array">
+      <obj_property name="ElementShortName">load_timer[8:0]</obj_property>
+      <obj_property name="ObjectShortName">load_timer[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/idle_counter" type="array">
+      <obj_property name="ElementShortName">idle_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">idle_counter[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/scan_inputArray/currentState" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
+      <obj_property name="label">currentState[2:0] - dacScan</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/scan_inputArray/read_timer" type="array">
+      <obj_property name="ElementShortName">read_timer[2:0]</obj_property>
+      <obj_property name="ObjectShortName">read_timer[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/scan_counter" type="array">
+      <obj_property name="ElementShortName">scan_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">scan_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/scan_inputArray/last_row" type="logic">
+      <obj_property name="ElementShortName">last_row</obj_property>
+      <obj_property name="ObjectShortName">last_row</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/test_counter" type="array">
+      <obj_property name="ElementShortName">test_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">test_counter[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/wait_counter" type="array">
+      <obj_property name="ElementShortName">wait_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">wait_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/all_scan_done" type="logic">
+      <obj_property name="ElementShortName">all_scan_done</obj_property>
+      <obj_property name="ObjectShortName">all_scan_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/test_counter" type="array">
+      <obj_property name="ElementShortName">test_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">test_counter[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/refresh_finish_inputArray" type="logic">
+      <obj_property name="ElementShortName">refresh_finish_inputArray</obj_property>
+      <obj_property name="ObjectShortName">refresh_finish_inputArray</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/requestDatafromDAC" type="logic">
+      <obj_property name="ElementShortName">requestDatafromDAC</obj_property>
+      <obj_property name="ObjectShortName">requestDatafromDAC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/ADC_finish" type="logic">
+      <obj_property name="ElementShortName">ADC_finish</obj_property>
+      <obj_property name="ObjectShortName">ADC_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/release_Va" type="logic">
+      <obj_property name="ElementShortName">release_Va</obj_property>
+      <obj_property name="ObjectShortName">release_Va</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/start_DAC_fromMAV" type="logic">
+      <obj_property name="ElementShortName">start_DAC_fromMAV</obj_property>
+      <obj_property name="ObjectShortName">start_DAC_fromMAV</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/inputArrayADDR" type="array">
+      <obj_property name="ElementShortName">inputArrayADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inputArrayADDR[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/WE_inputArray" type="logic">
+      <obj_property name="ElementShortName">WE_inputArray</obj_property>
+      <obj_property name="ObjectShortName">WE_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/tb5_uut/tc3_uut/WAIT_FOR_MAV_counter" type="array">
+      <obj_property name="ElementShortName">WAIT_FOR_MAV_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">WAIT_FOR_MAV_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/DRAM_EN_inputArray" type="logic">
+      <obj_property name="ElementShortName">DRAM_EN_inputArray</obj_property>
+      <obj_property name="ObjectShortName">DRAM_EN_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/DEC_EN_inputArray" type="logic">
+      <obj_property name="ElementShortName">DEC_EN_inputArray</obj_property>
+      <obj_property name="ObjectShortName">DEC_EN_inputArray</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/start_DAC" type="logic">
+      <obj_property name="ElementShortName">start_DAC</obj_property>
+      <obj_property name="ObjectShortName">start_DAC</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase5_top_tb/signORunsign" type="logic">
+      <obj_property name="ElementShortName">signORunsign</obj_property>
+      <obj_property name="ObjectShortName">signORunsign</obj_property>
+   </wvobject>
+</wave_config>

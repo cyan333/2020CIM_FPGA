@@ -1,0 +1,94 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Sep  5 14:34:20 2020
+| Host         : ECE-D09200 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file testcase6_adc_control_sets_placed.rpt
+| Design       : testcase6_adc
+| Device       : xc7vx485t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    76 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    16 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     0 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            4 |
+| No           | No                    | Yes                    |              21 |            9 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               1 |            1 |
+| Yes          | No                    | Yes                    |              34 |           23 |
+| Yes          | Yes                   | No                     |               6 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------+-------------------------------------------+-------------------------+------------------+----------------+--------------+
+|     Clock Signal    |               Enable Signal               |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------+-------------------------------------------+-------------------------+------------------+----------------+--------------+
+| ~clk_10M_valid_BUFG |                                           |                         |                1 |              1 |         1.00 |
+| ~clk_10M_valid_BUFG | scan_mavArray/WE_i_1_n_0                  | fpga_reset_IBUF         |                1 |              1 |         1.00 |
+| ~clk_10M_valid_BUFG | scan_mavArray/scanin_i_1_n_0              | fpga_reset_IBUF         |                1 |              1 |         1.00 |
+| ~clk_10M_valid_BUFG | scan_mavArray/se_i_1_n_0                  | fpga_reset_IBUF         |                1 |              1 |         1.00 |
+|  sys_clk_OBUF       | idle_counter                              |                         |                1 |              1 |         1.00 |
+| ~clk_10M_valid_BUFG | scan_mavArray/DRAM_EN_i_1_n_0             | fpga_reset_IBUF         |                2 |              2 |         1.00 |
+|  sys_clk_OBUF       | chip_reset_n_i_1_n_0                      | fpga_reset_IBUF         |                2 |              2 |         1.00 |
+|  clk_10M_valid_BUFG |                                           | fpga_reset_IBUF         |                2 |              3 |         1.50 |
+| ~clk_10M_valid_BUFG | scan_mavArray/currentAccessRow[4]_i_1_n_0 | fpga_reset_IBUF         |                3 |              5 |         1.67 |
+|  nextState          |                                           |                         |                3 |              5 |         1.67 |
+|  sys_clk_OBUF       | scan_counter[3]_i_1_n_0                   | fpga_reset_IBUF         |                2 |              5 |         2.50 |
+| ~sys_clk_OBUF       |                                           | fpga_reset_IBUF         |                3 |              5 |         1.67 |
+|  sys_clk_OBUF       | idle_counter                              | idle_counter[6]_i_1_n_0 |                2 |              6 |         3.00 |
+| ~clk_10M_valid_BUFG | scan_mavArray/thisRowValue[513]_i_1_n_0   | fpga_reset_IBUF         |                5 |              7 |         1.40 |
+| ~clk_10M_valid_BUFG | scan_mavArray/this_scancol[9]_i_1_n_0     | fpga_reset_IBUF         |                6 |             10 |         1.67 |
+| ~clk_10M_valid_BUFG |                                           | fpga_reset_IBUF         |                4 |             13 |         3.25 |
++---------------------+-------------------------------------------+-------------------------+------------------+----------------+--------------+
+
+
