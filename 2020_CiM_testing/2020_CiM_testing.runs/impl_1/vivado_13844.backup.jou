@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Aug  6 14:01:51 2020
+# Process ID: 13844
+# Current directory: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.runs/impl_1
+# Command line: vivado.exe -log testcase6_ts_mav.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source testcase6_ts_mav.tcl -notrace
+# Log file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.runs/impl_1/testcase6_ts_mav.vdi
+# Journal file: C:/Users/ECE-IT-Admin/Documents/Shanshan/2019_CIM/Testing/Cifar10_FPGA_Measurement/2020_CiM_testing/2020_CiM_testing.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source testcase6_ts_mav.tcl -notrace

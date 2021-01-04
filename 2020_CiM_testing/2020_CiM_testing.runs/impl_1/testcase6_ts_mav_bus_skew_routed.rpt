@@ -1,0 +1,15 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Aug  6 14:02:54 2020
+| Host         : ECE-D09200 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file testcase6_ts_mav_bus_skew_routed.rpt -pb testcase6_ts_mav_bus_skew_routed.pb -rpx testcase6_ts_mav_bus_skew_routed.rpx
+| Design       : testcase6_ts_mav
+| Device       : 7vx485t-ffg1761
+| Speed File   : -2  PRODUCTION 1.12 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

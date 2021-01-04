@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core" \
+"../../../../testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core/clk_core_clk_wiz.v" \
+"../../../../testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core/clk_core.v" \
+"../../../../testcase1_scanchain_singleReadWrite.srcs/sources_1/new/testcase1_singleReadWrite_scanChain.v" \
+"../../../../testcase1_scanchain_singleReadWrite.srcs/sources_1/new/testcase2_getResult.v" \
+"../../../../testcase1_scanchain_singleReadWrite.srcs/sim_testcase1/new/testcase1_scanchain_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

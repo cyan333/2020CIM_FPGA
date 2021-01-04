@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jul  8 17:14:40 2020
+# Process ID: 16708
+# Current directory: D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26096 D:\PHD\2019_CiM\Testing\FPGA\testcase1_scanchain_singleReadWrite\testcase1_scanchain_singleReadWrite.xpr
+# Log file: D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/vivado.log
+# Journal file: D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.xpr
+launch_simulation -simset [get_filesets sim_testcase2 ]
+source testcase2_getResult_tb.tcl
+close_sim
+close_project
+create_project 2020_CiM_testing D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing -part xc7vx485tffg1761-2
+set_property board_part xilinx.com:vc707:part0:1.4 [current_project]
+open_project D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.xpr
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_core] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_core] -no_script -sync -force -quiet
+current_project 2020_CiM_testing
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_core -dir d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {clk_core} CONFIG.CLK_IN1_BOARD_INTERFACE {sys_diff_clock} CONFIG.CLKOUT2_USED {true} CONFIG.CLK_OUT1_PORT {sys_clk_100M} CONFIG.CLK_OUT2_PORT {scan_clk_10M} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {10} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT1_DIVIDE {100} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {112.316} CONFIG.CLKOUT1_PHASE_ERROR {89.971} CONFIG.CLKOUT2_JITTER {178.053} CONFIG.CLKOUT2_PHASE_ERROR {89.971}] [get_ips clk_core]
+generate_target {instantiation_template} [get_files d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci]
+update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci]
+generate_target all [get_files  d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci]
+export_ip_user_files -of_objects [get_files d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files d:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci] -directory D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.ip_user_files/sim_scripts -ip_user_files_dir D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.ip_user_files -ipstatic_source_dir D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.cache/compile_simlib/modelsim} {questa=D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.cache/compile_simlib/questa} {riviera=D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.cache/compile_simlib/riviera} {activehdl=D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project testcase1_scanchain_singleReadWrite
+file mkdir D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new
+current_project 2020_CiM_testing
+close [ open D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v w ]
+add_files D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v
+update_compile_order -fileset sources_1
+close [ open D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/scan_module.v w ]
+add_files D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/scan_module.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property file_type SystemVerilog [get_files  D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v]
+set_property file_type Verilog [get_files  D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v]
+set_property file_type SystemVerilog [get_files  D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v]
+set_property file_type Verilog [get_files  D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v]
+current_project testcase1_scanchain_singleReadWrite
+current_fileset -simset [ get_filesets sim_testcase1 ]
+generate_target Simulation [get_files D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core/clk_core.xci]
+export_ip_user_files -of_objects [get_files D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core/clk_core.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.srcs/sources_1/ip/clk_core/clk_core.xci] -directory D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.ip_user_files/sim_scripts -ip_user_files_dir D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.ip_user_files -ipstatic_source_dir D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.cache/compile_simlib/modelsim} {questa=D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.cache/compile_simlib/questa} {riviera=D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.cache/compile_simlib/riviera} {activehdl=D:/PHD/2019_CiM/Testing/FPGA/testcase1_scanchain_singleReadWrite/testcase1_scanchain_singleReadWrite.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_testcase1 ]
+source testcase1_scanchain_tb.tcl
+run all
+relaunch_sim
+relaunch_sim
+current_project 2020_CiM_testing
+update_compile_order -fileset sources_1
+current_project testcase1_scanchain_singleReadWrite
+current_project 2020_CiM_testing
+file mkdir D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sim_1/new/testcase3_DAC_tb.v w ]
+add_files -fileset sim_1 D:/PHD/2019_CiM/Testing/FPGA/2020_CiM_testing/2020_CiM_testing.srcs/sim_1/new/testcase3_DAC_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source testcase3_DAC_tb.tcl
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+run all

@@ -1,0 +1,79 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Aug  6 14:02:52 2020
+| Host         : ECE-D09200 running 64-bit major release  (build 9200)
+| Command      : report_drc -file testcase6_ts_mav_drc_routed.rpt -pb testcase6_ts_mav_drc_routed.pb -rpx testcase6_ts_mav_drc_routed.rpx
+| Design       : testcase6_ts_mav
+| Device       : xc7vx485tffg1761-2
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 3          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net FSM_onehot_nextState[5]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM_onehot_nextState[5]_i_2/O, cell FSM_onehot_nextState[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net clk_10M_valid is a gated clock net sourced by a combinational pin FSM_onehot_currentState[5]_i_1/O, cell FSM_onehot_currentState[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net sys_clk_OBUF is a gated clock net sourced by a combinational pin sys_clk_OBUF_inst_i_1/O, cell sys_clk_OBUF_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT FSM_onehot_currentState[5]_i_1 is driving clock pin of 6 cells. This could lead to large hold time violations. Involved cells are:
+FSM_onehot_currentState_reg[0], FSM_onehot_currentState_reg[1],
+FSM_onehot_currentState_reg[2], FSM_onehot_currentState_reg[3],
+FSM_onehot_currentState_reg[4], FSM_onehot_currentState_reg[5]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT FSM_onehot_nextState[5]_i_2 is driving clock pin of 9 cells. This could lead to large hold time violations. Involved cells are:
+FSM_onehot_nextState_reg[0], FSM_onehot_nextState_reg[1],
+FSM_onehot_nextState_reg[2], FSM_onehot_nextState_reg[3],
+FSM_onehot_nextState_reg[4], FSM_onehot_nextState_reg[5],
+mav_cap_cs_test_reg, mav_mux_test_reg, test_enable_reg
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT sys_clk_OBUF_inst_i_1 is driving clock pin of 28 cells. This could lead to large hold time violations. Involved cells are:
+clk_counter_reg[0], clk_counter_reg[10], clk_counter_reg[11],
+clk_counter_reg[12], clk_counter_reg[13], clk_counter_reg[14],
+clk_counter_reg[15], clk_counter_reg[16], clk_counter_reg[17],
+clk_counter_reg[18], clk_counter_reg[19], clk_counter_reg[1],
+clk_counter_reg[20], clk_counter_reg[21], clk_counter_reg[22] (the first 15 of 28 listed)
+Related violations: <none>
+
+

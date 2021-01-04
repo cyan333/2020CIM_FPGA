@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testcase6_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testcase6_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="10265722fs"></ZoomEndTime>
+      <Cursor1Time time="211655000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/testcase6_tb/sys_clk_p" type="logic">
+      <obj_property name="ElementShortName">sys_clk_p</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/sys_clk_n" type="logic">
+      <obj_property name="ElementShortName">sys_clk_n</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/fpga_reset" type="logic">
+      <obj_property name="ElementShortName">fpga_reset</obj_property>
+      <obj_property name="ObjectShortName">fpga_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/chip_reset_n" type="logic">
+      <obj_property name="ElementShortName">chip_reset_n</obj_property>
+      <obj_property name="ObjectShortName">chip_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/tb6_uut/sys_clk_slow" type="logic">
+      <obj_property name="ElementShortName">sys_clk_slow</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_slow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/weight_test" type="array">
+      <obj_property name="ElementShortName">weight_test[2:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_test[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/mav_mux_test" type="logic">
+      <obj_property name="ElementShortName">mav_mux_test</obj_property>
+      <obj_property name="ObjectShortName">mav_mux_test</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/mav_cap_cs_test" type="logic">
+      <obj_property name="ElementShortName">mav_cap_cs_test</obj_property>
+      <obj_property name="ObjectShortName">mav_cap_cs_test</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/test_enable" type="logic">
+      <obj_property name="ElementShortName">test_enable</obj_property>
+      <obj_property name="ObjectShortName">test_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/signORunsign" type="logic">
+      <obj_property name="ElementShortName">signORunsign</obj_property>
+      <obj_property name="ObjectShortName">signORunsign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/tb6_uut/clk_10M_valid" type="logic">
+      <obj_property name="ElementShortName">clk_10M_valid</obj_property>
+      <obj_property name="ObjectShortName">clk_10M_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testcase6_tb/tb6_uut/weght_count" type="array">
+      <obj_property name="ElementShortName">weght_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">weght_count[1:0]</obj_property>
+   </wvobject>
+</wave_config>

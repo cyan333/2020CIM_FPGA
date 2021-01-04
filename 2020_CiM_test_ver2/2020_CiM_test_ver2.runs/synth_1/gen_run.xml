@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1597118448">
+  <File Type="PA-TCL" Name="testcase6_ts_mav.tcl"/>
+  <File Type="REPORTS-TCL" Name="testcase6_ts_mav_reports.tcl"/>
+  <File Type="RDS-RDS" Name="testcase6_ts_mav.vds"/>
+  <File Type="RDS-UTIL" Name="testcase6_ts_mav_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="testcase6_ts_mav_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="testcase6_ts_mav.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/clk_core/clk_core.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/ip/clk_core/clk_core.xci"/>
+        <Attr Name="ImportTime" Val="1594325763"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase6_ts_mav.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase6_ts_mav.v"/>
+        <Attr Name="ImportTime" Val="1596691372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/scan_module.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/scan_module.v"/>
+        <Attr Name="ImportTime" Val="1596414938"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase3_DAC.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase3_DAC.v"/>
+        <Attr Name="ImportTime" Val="1596690594"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase4_MAV.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase4_MAV.v"/>
+        <Attr Name="ImportTime" Val="1596661627"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testcase5_top_DACandMAV.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/sources_1/new/testcase5_top_DACandMAV.v"/>
+        <Attr Name="ImportTime" Val="1596657060"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="testcase6_ts_mav"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/tc6_ts_mav.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../2020_CiM_testing/2020_CiM_testing.srcs/constrs_1/new/tc6_ts_mav.xdc"/>
+        <Attr Name="ImportTime" Val="1596760425"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
